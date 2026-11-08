@@ -1,0 +1,65 @@
+/* Nav */
+.nav { display: flex; align-items: center; gap: 8px; padding: 12px 24px; border-bottom: 1px solid var(--border); }
+.nav .brand { font-weight: 700; color: var(--text-h); margin-right: auto; }
+.nav button { background: transparent; color: var(--text); padding: 8px 14px; }
+.nav button.active { background: var(--accent-bg); color: var(--accent); }
+
+.container.wide { max-width: 1100px; }
+
+.card-header { display: flex; justify-content: space-between; align-items: flex-start; gap: 16px; }
+.card-header p { margin: 4px 0 0; }
+
+/* Table */
+.table-wrap { overflow-x: auto; margin-top: 20px; }
+.inquiry-table { width: 100%; border-collapse: collapse; font-size: 15px; }
+.inquiry-table th, .inquiry-table td { padding: 10px 12px; text-align: left; border-bottom: 1px solid var(--border); white-space: nowrap; }
+.inquiry-table th { font-size: 13px; text-transform: uppercase; letter-spacing: .04em; color: var(--text); }
+.inquiry-table td { color: var(--text-h); }
+.inquiry-table tbody tr:hover { background: var(--accent-bg); }
+.empty { margin-top: 20px; }
+
+/* Status colours */
+.badge-new        { background: rgba(37, 99, 235, .12);  color: #2563eb; }
+.badge-contacted  { background: rgba(217, 119, 6, .12);  color: #d97706; }
+.badge-pending    { background: rgba(107, 114, 128, .15); color: #6b7280; }
+.badge-registered { background: rgba(22, 163, 74, .12);  color: #16a34a; }
+.badge-closed     { background: rgba(75, 85, 99, .15);   color: #4b5563; }
+
+/* Status filter */
+.status-filter { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 20px; }
+.status-filter button {
+  background: transparent; color: var(--text); border: 1px solid var(--border);
+  padding: 6px 14px; border-radius: 999px; font-size: 14px;
+}
+.status-filter button:hover { border-color: var(--accent-border); }
+.status-filter button.active { background: var(--accent); border-color: var(--accent); color: #fff; }
+
+.alert {
+  display: flex; justify-content: space-between; align-items: center; gap: 12px;
+  margin-top: 16px; padding: 12px 14px; border-radius: 8px; font-size: 15px;
+  background: rgba(217, 48, 37, .1); color: #d93025;   /* default = error */
+}
+.alert-success { background: rgba(22, 163, 74, .12); color: #15803d; }
+.alert-error   { background: rgba(217, 48, 37, .1);  color: #d93025; }
+.alert-close   { background: transparent; color: inherit; padding: 0 4px; font-size: 20px; line-height: 1; }
+
+/* Clickable rows + link-style buttons */
+.inquiry-table tr.clickable { cursor: pointer; }
+.link-button { background: transparent; color: var(--accent); padding: 0; font-size: 15px; }
+.link-button:hover { text-decoration: underline; }
+
+/* Detail page */
+.details { display: grid; grid-template-columns: max-content 1fr; gap: 10px 24px; margin: 24px 0; }
+.details dt { font-weight: 600; color: var(--text-h); }
+.details dd { margin: 0; }
+.details .message { white-space: pre-wrap; }
+
+.status-update {
+  display: flex; align-items: center; flex-wrap: wrap; gap: 12px;
+  padding-top: 20px; border-top: 1px solid var(--border);
+}
+.status-update label { font-weight: 600; color: var(--text-h); }
+.status-select {
+  font: inherit; font-size: 16px; padding: 9px 12px;
+  border: 1px solid var(--border); border-radius: 8px; background: var(--bg); color: var(--text-h);
+}
