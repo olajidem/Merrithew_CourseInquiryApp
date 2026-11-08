@@ -1,4 +1,4 @@
-import { apiGet, apiPatch, apiPost } from './apiClient';
+import { apiGet, apiPut, apiPost } from './apiClient';
 import type { CreateInquiryRequest, InquiryResponse, InquiryStatus } from '../types/inquiry';
 
 export function createInquiry(request: CreateInquiryRequest): Promise<InquiryResponse> {
@@ -15,5 +15,5 @@ export function getInquiry(id: number): Promise<InquiryResponse> {
 }
 
 export function updateInquiryStatus(id: number, status: InquiryStatus): Promise<InquiryResponse> {
-  return apiPatch<InquiryResponse>(`/inquiries/${id}/status`, { status });
+  return apiPut<InquiryResponse>(`/inquiries/${id}/status`, { status });
 }

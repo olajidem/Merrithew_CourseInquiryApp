@@ -155,7 +155,7 @@ public class InquiriesControllerTests
         Assert.Contains("999", Assert.IsType<ProblemDetails>(problem.Value).Detail);
     }
 
-    // ---------- PATCH status ----------
+    // ---------- PUT status ----------
 
     [Fact]
     public async Task UpdateStatus_ValidStatus_Returns200WithUpdatedInquiry()
