@@ -71,8 +71,8 @@ public class InquiriesController : ControllerBase
         return inquiry is null ? InquiryNotFound(id) : Ok(inquiry);
     }
 
-    // PATCH api/inquiries/5/status   body: { "status": "Contacted" } Update inquiry status
-    [HttpPatch("{id:int}/status")]
+    // Put api/inquiries/5/status   body: { "status": "Contacted" } Update inquiry status
+    [HttpPut("{id:int}/status")]
     [ProducesResponseType(typeof(InquiryResponse), StatusCodes.Status200OK)]
     [ProducesResponseType(typeof(ValidationProblemDetails), StatusCodes.Status400BadRequest)]
     [ProducesResponseType(typeof(ProblemDetails), StatusCodes.Status404NotFound)]
